@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <style>
+
+     table,
+    th,
+    td {
+
+       font-family:'Century Gothic',CenturyGothic,AppleGothic,sans-serif;
+           text-align: center;
+           border: 1px solid black;
+           border-collapse: collapse;
+           white-space: nowrap;
+
+    }
+
+    </style>
+</head>
+<body>
+
+
+<table>
+
+<tr  style="background-color:#FFD897; font-size:14px; padding: 9px 8px 9px 8px;">
+    <th  colspan="17" style="width:70px">FI KYC Online Volumes as on Date : <span th:text="${mainDto.subDate()}"> </span></th>
+
+</tr>
+
+    <tr style="background-color:#b6cff2; font-size:14px; padding: 9px 8px 9px 8px;">
+        <th style="width:70px">Category</th>
+        <th style="width:200px">Count-UAE</th>
+        <th style="width:190px">Count-Bahrain</th>
+        <th style="width:170px">Count-Qatar</th>
+        <th style="width:200px">Count-Kuwait</th>
+
+
+    </tr>
+
+    <tr>
+        <th style=" font-size:14px; padding: 9px 8px 9px 8px;"> Number of Active(excluding dormant) correspondent banking relationships(CIF Level)</th>
+
+        <td th:text="${mainDto.getUaeCIFLevelCount()}"></td>
+        <td th:text="${mainDto.getBahrainCIFLevelCount()}"></td>
+        <td th:text="${mainDto.getQatarCIFLevelCount()}"></td>
+        <td th:text="${mainDto.getKuwaitCIFLevelCount()}"></td>
+
+
+
+    </tr>
+    <tr>
+        <th style=" font-size:14px; padding: 9px 8px 9px 8px;"> Number of Active(excluding dormant) correspondent banking Accounts(Account Level)</th>
+        <td th:text="${mainDto.getUaeAccountLevelCount()}"></td>
+        <td th:text="${mainDto.getBahrainAccountLevelCount()}"></td>
+        <td th:text="${mainDto.getQatarAccountLevelCount()}"></td>
+        <td th:text="${mainDto.getKuwaitAccountLevelCount()}"></td>
+
+
+    </tr>
+
+
+</table>
+
+<p></p>
+<p></p>
+
+
+
+
+
+</body>
+</html>
